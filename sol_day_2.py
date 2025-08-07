@@ -3,7 +3,7 @@ def safe(report):
     d = [j - i for i, j in zip(report, report[1:])]
     return (all(x > 0 for x in d) or all(x < 0 for x in d)) and all(1 <= abs(x) <= 3 for x in d)
 
-with open('input.txt") as f:
+with open("day_2_input.txt") as f:
     # parse each non‑empty line into a list of ints
     reports = [list(map(int, line.split())) for line in f if line.strip()]
 
